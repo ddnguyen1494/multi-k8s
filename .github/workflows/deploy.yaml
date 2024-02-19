@@ -13,12 +13,12 @@ jobs:
       - run: docker build -t duynguyen1494/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true duynguyen1494/react-test npm test
  
-      - run: docker build -t duynguyen1494/multi-client-10-14 ./client
-      - run: docker build -t duynguyen1494/multi-nginx-10-14 ./nginx
-      - run: docker build -t duynguyen1494/multi-server-10-14 ./server
-      - run: docker build -t duynguyen1494/multi-worker-10-14 ./worker
+      - run: docker build -t duynguyen1494/multi-client ./client
+      - run: docker build -t duynguyen1494/multi-nginx ./nginx
+      - run: docker build -t duynguyen1494/multi-server ./server
+      - run: docker build -t duynguyen1494/multi-worker ./worker
  
-      - run: docker push duynguyen1494/multi-client-10-14
-      - run: docker push duynguyen1494/multi-nginx-10-14
-      - run: docker push duynguyen1494/multi-server-10-14
-      - run: docker push duynguyen1494/multi-worker-10-14
+      - run: docker push duynguyen1494/multi-client
+      - run: docker push duynguyen1494/multi-nginx
+      - run: docker push duynguyen1494/multi-server
+      - run: docker push duynguyen1494/multi-worker
